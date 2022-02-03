@@ -17,6 +17,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import FAQ from './pages/FAQ'
 import ButtonPage from './component-pages/ButtonPage'
+import AutocompletePage from './component-pages/AutocompletePage'
 
 const drawerWidth = 240;
 
@@ -66,6 +67,9 @@ export default function PermanentDrawerLeft() {
             Components
           </ListSubheader>
           <ListItem button >
+            <ListItemText primary={"Autocomplete"} onClick={() => navigate('mui-x-reacttestinglibrary/autocomplete')}/>
+          </ListItem>
+          <ListItem button >
             <ListItemText primary={"Button"} onClick={() => navigate('mui-x-reacttestinglibrary/button')}/>
           </ListItem>
 
@@ -100,6 +104,9 @@ export default function PermanentDrawerLeft() {
         </Routes>
         <Routes>
             <Route path="mui-x-reacttestinglibrary/faq" element={<FAQ />}/>
+        </Routes>
+        <Routes>
+            <Route path="mui-x-reacttestinglibrary/autocomplete" element={<AutocompletePage />}/>
         </Routes>
         <Routes>
             <Route path="mui-x-reacttestinglibrary/button" element={<ButtonPage />}/>
