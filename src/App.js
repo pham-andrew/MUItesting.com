@@ -12,7 +12,7 @@ import ListItemText from '@mui/material/ListItemText'
 import ListSubheader from '@mui/material/ListSubheader'
 
 
-import { BrowserRouter as Router, Navigate, Route, Routes, useNavigate } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import FAQ from './pages/FAQ'
