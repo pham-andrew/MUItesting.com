@@ -32,7 +32,7 @@ export default function PermanentDrawerLeft() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            MUI x React Testing Library
+            MUI Testing
           </Typography>
         </Toolbar>
       </AppBar>
@@ -53,13 +53,13 @@ export default function PermanentDrawerLeft() {
         <Divider />
         <List>
 
-          <ListItem button onClick={() => navigate('mui-x-reacttestinglibrary/')}>
+          <ListItem button onClick={() => navigate('mui-testing/')}>
             <ListItemText primary={"Home"}/>
           </ListItem>
-          <ListItem button onClick={() => navigate('mui-x-reacttestinglibrary/about')}>
+          <ListItem button onClick={() => navigate('mui-testing/about')}>
             <ListItemText primary={"About"} />
           </ListItem>
-          <ListItem button onClick={() => navigate('mui-x-reacttestinglibrary/faq')}>
+          <ListItem button onClick={() => navigate('mui-testing/faq')}>
             <ListItemText primary={"FAQ"} />
           </ListItem>
 
@@ -67,10 +67,10 @@ export default function PermanentDrawerLeft() {
             Components
           </ListSubheader>
           <ListItem button >
-            <ListItemText primary={"Autocomplete"} onClick={() => navigate('mui-x-reacttestinglibrary/autocomplete')}/>
+            <ListItemText primary={"Autocomplete"} onClick={() => navigate('mui-testing/autocomplete')}/>
           </ListItem>
           <ListItem button >
-            <ListItemText primary={"Button"} onClick={() => navigate('mui-x-reacttestinglibrary/button')}/>
+            <ListItemText primary={"Button"} onClick={() => navigate('mui-testing/button')}/>
           </ListItem>
 
           <ListSubheader>
@@ -97,19 +97,19 @@ export default function PermanentDrawerLeft() {
       >
         <Toolbar />
         <Routes>
-            <Route path="mui-x-reacttestinglibrary/" element={<Home />}/>
+            <Route path="mui-testing/" element={<Home />}/>
         </Routes>
         <Routes>
-            <Route path="mui-x-reacttestinglibrary/about" element={<About />}/>
+            <Route path="mui-testing/about" element={<About />}/>
         </Routes>
         <Routes>
-            <Route path="mui-x-reacttestinglibrary/faq" element={<FAQ />}/>
+            <Route path="mui-testing/faq" element={<FAQ />}/>
         </Routes>
         <Routes>
-            <Route path="mui-x-reacttestinglibrary/autocomplete" element={<AutocompletePage />}/>
+            <Route path="mui-testing/autocomplete" element={<AutocompletePage />}/>
         </Routes>
         <Routes>
-            <Route path="mui-x-reacttestinglibrary/button" element={<ButtonPage />}/>
+            <Route path="mui-testing/button" element={<ButtonPage />}/>
         </Routes>
       </Box>
     </Box>

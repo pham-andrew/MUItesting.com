@@ -1,6 +1,6 @@
 {
-  "homepage": "http://pham-andrew.github.io/mui-x-reacttestinglibrary",
-  "name": "mui-x-reacttestinglibrary",
+  "homepage": "http://pham-andrew.github.io/mui-testing",
+  "name": "mui-testing",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
