@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mui-x-reacttestinglibrary/static/css/main.e6c13ad2.css",
-    "main.js": "/mui-x-reacttestinglibrary/static/js/main.206e4693.js",
-    "static/js/787.8e682e40.chunk.js": "/mui-x-reacttestinglibrary/static/js/787.8e682e40.chunk.js",
-    "index.html": "/mui-x-reacttestinglibrary/index.html",
-    "main.e6c13ad2.css.map": "/mui-x-reacttestinglibrary/static/css/main.e6c13ad2.css.map",
-    "main.206e4693.js.map": "/mui-x-reacttestinglibrary/static/js/main.206e4693.js.map",
-    "787.8e682e40.chunk.js.map": "/mui-x-reacttestinglibrary/static/js/787.8e682e40.chunk.js.map"
+    "main.css": "/mui-testing/static/css/main.e6c13ad2.css",
+    "main.js": "/mui-testing/static/js/main.e8c2d359.js",
+    "static/js/787.ba3ec041.chunk.js": "/mui-testing/static/js/787.ba3ec041.chunk.js",
+    "index.html": "/mui-testing/index.html",
+    "main.e6c13ad2.css.map": "/mui-testing/static/css/main.e6c13ad2.css.map",
+    "main.e8c2d359.js.map": "/mui-testing/static/js/main.e8c2d359.js.map",
+    "787.ba3ec041.chunk.js.map": "/mui-testing/static/js/787.ba3ec041.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.206e4693.js"
+    "static/js/main.e8c2d359.js"
   ]
 }
