@@ -16,8 +16,9 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 import Home from './pages/Home'
 import About from './pages/About'
 import FAQ from './pages/FAQ'
-import ButtonPage from './component-pages/ButtonPage'
 import AutocompletePage from './component-pages/AutocompletePage'
+import ButtonPage from './component-pages/ButtonPage'
+import ButtonGroupPage from './component-pages/ButtonGroupPage'
 
 const drawerWidth = 240;
 
@@ -72,6 +73,9 @@ export default function PermanentDrawerLeft() {
           <ListItem button >
             <ListItemText primary={"Button"} onClick={() => navigate('mui-testing/button')}/>
           </ListItem>
+          <ListItem button >
+            <ListItemText primary={"Button Group"} onClick={() => navigate('mui-testing/buttongroup')}/>
+          </ListItem>
 
           <ListSubheader>
             Other Helpful Tests
@@ -110,6 +114,9 @@ export default function PermanentDrawerLeft() {
         </Routes>
         <Routes>
             <Route path="mui-testing/button" element={<ButtonPage />}/>
+        </Routes>
+        <Routes>
+            <Route path="mui-testing/buttongroup" element={<ButtonGroupPage />}/>
         </Routes>
       </Box>
     </Box>
