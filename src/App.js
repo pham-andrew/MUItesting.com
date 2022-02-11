@@ -19,6 +19,7 @@ import FAQ from './pages/FAQ'
 import AutocompletePage from './component-pages/AutocompletePage'
 import ButtonPage from './component-pages/ButtonPage'
 import ButtonGroupPage from './component-pages/ButtonGroupPage'
+import CheckboxPage from './component-pages/CheckboxPage'
 
 const drawerWidth = 240;
 
@@ -76,6 +77,9 @@ export default function PermanentDrawerLeft() {
           <ListItem button >
             <ListItemText primary={"Button Group"} onClick={() => navigate('mui-testing/buttongroup')}/>
           </ListItem>
+          <ListItem button >
+            <ListItemText primary={"Checkbox"} onClick={() => navigate('mui-testing/checkbox')}/>
+          </ListItem>
 
           <ListSubheader>
             Other Helpful Tests
@@ -118,8 +122,10 @@ export default function PermanentDrawerLeft() {
         <Routes>
             <Route path="mui-testing/buttongroup" element={<ButtonGroupPage />}/>
         </Routes>
+        <Routes>
+            <Route path="mui-testing/checkbox" element={<CheckboxPage />}/>
+        </Routes>
       </Box>
     </Box>
   );
-  
 }
