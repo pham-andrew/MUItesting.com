@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Fab from '@mui/material/Fab';
-import FloatingActionButtonCodeBlocks from './FloatingActionButtonCodeBlocks';
+import CodeBlocks from '../CodeBlocks';
 import { Box } from '@mui/system';
 
 export default function FloatingActionButtonPage() {
@@ -20,7 +20,7 @@ export default function FloatingActionButtonPage() {
                 {clicked && <Typography>Clicked!</Typography>}
                 {/* 🙈 */}
             </Box>
-            <FloatingActionButtonCodeBlocks />
+            <CodeBlocks source="11dfb3f10bd2229f880552151c9e523c" test="b253a1336fe9747212474532c53b4142"/>
         </>
     ) 
 }

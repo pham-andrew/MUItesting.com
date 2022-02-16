@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import ButtonGroupCodeBlocks from './ButtonGroupCodeBlocks';
+import CodeBlocks from '../CodeBlocks'
 import { Box } from '@mui/system';
 
 export default function ButtonGroupPage() {
@@ -22,7 +22,7 @@ export default function ButtonGroupPage() {
                 {clicked}
                 {/* 🙈 */}
             </Box>
-            <ButtonGroupCodeBlocks />
+            <CodeBlocks source="7d4e043efd0a570b52b70084ba89b73f" test="1b6babbb17508d1dfb73e1775635b202" />
         </>
     ) 
 }

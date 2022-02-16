@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
-import AutocompleteCodeBlocks from './AutocompleteCodeBlocks';
+import CodeBlocks from "../CodeBlocks"
 
 export default function AutocompletePage() {
   const [selected, setSelected] = useState("")
@@ -24,7 +24,7 @@ export default function AutocompletePage() {
           {selected}
           {/* 🙈 */}
       </Box>
-      <AutocompleteCodeBlocks />
+      <CodeBlocks source="6ef6f8a5de907d77f95e871b04eb3384" test="6cabd87b86b6273899352e63aa0a44bf" />
     </>
   );
 }

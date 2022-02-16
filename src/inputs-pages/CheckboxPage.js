@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Checkbox from '@mui/material/Checkbox';
-import CheckboxCodeBlocks from './CheckboxCodeBlocks';
+import CodeBlocks from '../CodeBlocks';
 import { Box } from '@mui/system';
 
 export default function CheckboxPage() {
@@ -17,7 +17,7 @@ export default function CheckboxPage() {
                 {checked && <Typography>Checked!</Typography>}
                 {/* 🙈 */}
             </Box>
-            <CheckboxCodeBlocks />
+            <CodeBlocks source="0d29b110235ce3f552d489a4f2482d79" test="eea842cc056edf39562a5dfe76be5afd"/>
         </>
     ) 
 }

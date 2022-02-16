@@ -23,6 +23,7 @@ import ButtonPage from './inputs-pages/ButtonPage'
 import ButtonGroupPage from './inputs-pages/ButtonGroupPage'
 import CheckboxPage from './inputs-pages/CheckboxPage'
 import FloatingActionButtonPage from './inputs-pages/FloatingActionButtonPage'
+import RadioPage from './inputs-pages/RadioPage'
 
 const drawerWidth = 240;
 
@@ -96,6 +97,9 @@ export default function PermanentDrawerLeft() {
           <ListItem button onClick={() => navigate('fab')}>
             <ListItemText primary={"Floating Action Button"}/>
           </ListItem>
+          <ListItem button onClick={() => navigate('radio')}>
+            <ListItemText primary={"Radio"}/>
+          </ListItem>
 
           <ListSubheader>
             Other Helpful Test Examples
@@ -146,6 +150,9 @@ export default function PermanentDrawerLeft() {
         </Routes>
         <Routes>
             <Route path="fab" element={<FloatingActionButtonPage />}/>
+        </Routes>
+        <Routes>
+            <Route path="radio" element={<RadioPage />}/>
         </Routes>
         <Routes>
             <Route path="" element={<Home />}/>
