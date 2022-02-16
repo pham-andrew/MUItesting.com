@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Helmet from 'react-helmet'
 
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
@@ -26,10 +27,13 @@ import FloatingActionButtonPage from './inputs-pages/FloatingActionButtonPage'
 const drawerWidth = 240;
 
 export default function PermanentDrawerLeft() {
-  let navigate = useNavigate();
+  let navigate = useNavigate()
 
   return (
     <Box sx={{ display: 'flex' }}>
+      <Helmet >
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1523342493703569" crossorigin="anonymous"></script>
+      </Helmet>
       <AppBar
         position="fixed"
         sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
@@ -57,20 +61,20 @@ export default function PermanentDrawerLeft() {
         <Divider />
         <List>
 
-          <ListItem button onClick={() => navigate('mui-testing/')}>
+          <ListItem button onClick={() => navigate('')}>
             <ListItemText primary={"Home"}/>
           </ListItem>
-          <ListItem button onClick={() => navigate('mui-testing/about')}>
+          <ListItem button onClick={() => navigate('about')}>
             <ListItemText primary={"About"} />
           </ListItem>
 
           <ListSubheader>
             FAQ
           </ListSubheader>
-          <ListItem button onClick={() => navigate('mui-testing/enzyme')}>
+          <ListItem button onClick={() => navigate('enzyme')}>
             <ListItemText primary={"Enzyme or RTL?"} />
           </ListItem>
-          <ListItem button onClick={() => navigate('mui-testing/aria')}>
+          <ListItem button onClick={() => navigate('aria')}>
             <ListItemText primary={"Why aria-label?"} />
           </ListItem>
 
@@ -78,35 +82,35 @@ export default function PermanentDrawerLeft() {
             Inputs
           </ListSubheader>
           <ListItem button >
-            <ListItemText primary={"Autocomplete"} onClick={() => navigate('mui-testing/autocomplete')}/>
+            <ListItemText primary={"Autocomplete"} onClick={() => navigate('autocomplete')}/>
           </ListItem>
           <ListItem button >
-            <ListItemText primary={"Button"} onClick={() => navigate('mui-testing/button')}/>
+            <ListItemText primary={"Button"} onClick={() => navigate('button')}/>
           </ListItem>
           <ListItem button >
-            <ListItemText primary={"Button Group"} onClick={() => navigate('mui-testing/buttongroup')}/>
+            <ListItemText primary={"Button Group"} onClick={() => navigate('buttongroup')}/>
           </ListItem>
           <ListItem button >
-            <ListItemText primary={"Checkbox"} onClick={() => navigate('mui-testing/checkbox')}/>
+            <ListItemText primary={"Checkbox"} onClick={() => navigate('checkbox')}/>
           </ListItem>
           <ListItem button >
-            <ListItemText primary={"Floating Action Button"} onClick={() => navigate('mui-testing/fab')}/>
+            <ListItemText primary={"Floating Action Button"} onClick={() => navigate('fab')}/>
           </ListItem>
 
           <ListSubheader>
             Other Helpful Test Examples
           </ListSubheader>
           <ListItem button disabled>
-            <ListItemText primary={"React Router"} />
+            <ListItemText primary={"React Router"}/>
           </ListItem>
           <ListItem button disabled>
-            <ListItemText primary={"API Mocking"} />
+            <ListItemText primary={"API Mocking"}/>
           </ListItem>
           <ListItem button disabled>
-            <ListItemText primary={"useContext"} />
+            <ListItemText primary={"useContext"}/>
           </ListItem>
           <ListItem button disabled>
-            <ListItemText primary={"getBy"} />
+            <ListItemText primary={"Query Examples, getBy..."}/>
           </ListItem>
 
 
@@ -120,33 +124,32 @@ export default function PermanentDrawerLeft() {
       >
         <Toolbar />
         <Routes>
-            <Route path="mui-testing/" element={<Home />}/>
+            <Route path="about" element={<About />}/>
         </Routes>
         <Routes>
-            <Route path="mui-testing/about" element={<About />}/>
+            <Route path="enzyme" element={<Enzyme />}/>
         </Routes>
         <Routes>
-            <Route path="mui-testing/enzyme" element={<Enzyme />}/>
+            <Route path="aria" element={<Aria />}/>
         </Routes>
         <Routes>
-            <Route path="mui-testing/aria" element={<Aria />}/>
+            <Route path="autocomplete" element={<AutocompletePage />}/>
         </Routes>
         <Routes>
-            <Route path="mui-testing/autocomplete" element={<AutocompletePage />}/>
+            <Route path="button" element={<ButtonPage />}/>
         </Routes>
         <Routes>
-            <Route path="mui-testing/button" element={<ButtonPage />}/>
+            <Route path="buttongroup" element={<ButtonGroupPage />}/>
         </Routes>
         <Routes>
-            <Route path="mui-testing/buttongroup" element={<ButtonGroupPage />}/>
+            <Route path="checkbox" element={<CheckboxPage />}/>
         </Routes>
         <Routes>
-            <Route path="mui-testing/checkbox" element={<CheckboxPage />}/>
+            <Route path="fab" element={<FloatingActionButtonPage />}/>
         </Routes>
         <Routes>
-            <Route path="mui-testing/fab" element={<FloatingActionButtonPage />}/>
+            <Route path="" element={<Home />}/>
         </Routes>
-
       </Box>
     </Box>
   );
