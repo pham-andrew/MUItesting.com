@@ -81,20 +81,20 @@ export default function PermanentDrawerLeft() {
           <ListSubheader>
             Inputs
           </ListSubheader>
-          <ListItem button >
-            <ListItemText primary={"Autocomplete"} onClick={() => navigate('autocomplete')}/>
+          <ListItem button onClick={() => navigate('autocomplete')}>
+            <ListItemText primary={"Autocomplete"}/>
           </ListItem>
-          <ListItem button >
-            <ListItemText primary={"Button"} onClick={() => navigate('button')}/>
+          <ListItem button onClick={() => navigate('button')}>
+            <ListItemText primary={"Button"}/>
           </ListItem>
-          <ListItem button >
-            <ListItemText primary={"Button Group"} onClick={() => navigate('buttongroup')}/>
+          <ListItem button onClick={() => navigate('buttongroup')}>
+            <ListItemText primary={"Button Group"} />
           </ListItem>
-          <ListItem button >
-            <ListItemText primary={"Checkbox"} onClick={() => navigate('checkbox')}/>
+          <ListItem button onClick={() => navigate('checkbox')}>
+            <ListItemText primary={"Checkbox"}/>
           </ListItem>
-          <ListItem button >
-            <ListItemText primary={"Floating Action Button"} onClick={() => navigate('fab')}/>
+          <ListItem button onClick={() => navigate('fab')}>
+            <ListItemText primary={"Floating Action Button"}/>
           </ListItem>
 
           <ListSubheader>
