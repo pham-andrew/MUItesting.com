@@ -15,11 +15,13 @@ import ListSubheader from '@mui/material/ListSubheader'
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
-import FAQ from './pages/FAQ'
-import AutocompletePage from './component-pages/AutocompletePage'
-import ButtonPage from './component-pages/ButtonPage'
-import ButtonGroupPage from './component-pages/ButtonGroupPage'
-import CheckboxPage from './component-pages/CheckboxPage'
+import Enzyme from './faq/Enzyme'
+import Aria from './faq/Aria'
+import AutocompletePage from './inputs-pages/AutocompletePage'
+import ButtonPage from './inputs-pages/ButtonPage'
+import ButtonGroupPage from './inputs-pages/ButtonGroupPage'
+import CheckboxPage from './inputs-pages/CheckboxPage'
+import FloatingActionButtonPage from './inputs-pages/FloatingActionButtonPage'
 
 const drawerWidth = 240;
 
@@ -61,12 +63,19 @@ export default function PermanentDrawerLeft() {
           <ListItem button onClick={() => navigate('mui-testing/about')}>
             <ListItemText primary={"About"} />
           </ListItem>
-          <ListItem button onClick={() => navigate('mui-testing/faq')}>
-            <ListItemText primary={"FAQ"} />
+
+          <ListSubheader>
+            FAQ
+          </ListSubheader>
+          <ListItem button onClick={() => navigate('mui-testing/enzyme')}>
+            <ListItemText primary={"Enzyme or RTL?"} />
+          </ListItem>
+          <ListItem button onClick={() => navigate('mui-testing/aria')}>
+            <ListItemText primary={"Why aria-label?"} />
           </ListItem>
 
           <ListSubheader>
-            Components
+            Inputs
           </ListSubheader>
           <ListItem button >
             <ListItemText primary={"Autocomplete"} onClick={() => navigate('mui-testing/autocomplete')}/>
@@ -80,18 +89,24 @@ export default function PermanentDrawerLeft() {
           <ListItem button >
             <ListItemText primary={"Checkbox"} onClick={() => navigate('mui-testing/checkbox')}/>
           </ListItem>
+          <ListItem button >
+            <ListItemText primary={"Floating Action Button"} onClick={() => navigate('mui-testing/fab')}/>
+          </ListItem>
 
           <ListSubheader>
-            Other Helpful Tests
+            Other Helpful Test Examples
           </ListSubheader>
-          <ListItem button >
+          <ListItem button disabled>
             <ListItemText primary={"React Router"} />
           </ListItem>
-          <ListItem button >
+          <ListItem button disabled>
             <ListItemText primary={"API Mocking"} />
           </ListItem>
-          <ListItem button >
+          <ListItem button disabled>
             <ListItemText primary={"useContext"} />
+          </ListItem>
+          <ListItem button disabled>
+            <ListItemText primary={"getBy"} />
           </ListItem>
 
 
@@ -111,7 +126,10 @@ export default function PermanentDrawerLeft() {
             <Route path="mui-testing/about" element={<About />}/>
         </Routes>
         <Routes>
-            <Route path="mui-testing/faq" element={<FAQ />}/>
+            <Route path="mui-testing/enzyme" element={<Enzyme />}/>
+        </Routes>
+        <Routes>
+            <Route path="mui-testing/aria" element={<Aria />}/>
         </Routes>
         <Routes>
             <Route path="mui-testing/autocomplete" element={<AutocompletePage />}/>
@@ -125,6 +143,10 @@ export default function PermanentDrawerLeft() {
         <Routes>
             <Route path="mui-testing/checkbox" element={<CheckboxPage />}/>
         </Routes>
+        <Routes>
+            <Route path="mui-testing/fab" element={<FloatingActionButtonPage />}/>
+        </Routes>
+
       </Box>
     </Box>
   );

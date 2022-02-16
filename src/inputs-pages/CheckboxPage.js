@@ -13,7 +13,7 @@ export default function CheckboxPage() {
             <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
-                <Checkbox checked={checked} onChange={() => setChecked(!checked)}>Checked</Checkbox>
+                <Checkbox checked={checked} onChange={() => setChecked(!checked)} />
                 {checked && <Typography>Checked!</Typography>}
                 {/* 🙈 */}
             </Box>
