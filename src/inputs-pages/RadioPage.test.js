@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import RadioPage from "./RadioPage"
 
-test("Clicking the button makes text Clicked! appear on screen", () => {
+test("clicking radio makes male / female appear", () => {
     render(<RadioPage />)
     fireEvent.click(screen.getByRole("radio", { name: "Male" }));
     expect(screen.getByText("boy")).toBeInTheDocument();
