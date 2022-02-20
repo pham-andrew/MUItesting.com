@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useState } from 'react'
 import Helmet from 'react-helmet'
 
 import Box from '@mui/material/Box'
@@ -11,13 +12,13 @@ import Divider from '@mui/material/Divider'
 import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import ListSubheader from '@mui/material/ListSubheader'
+import IconButton from '@mui/material/IconButton'
+import MenuIcon from '@mui/icons-material/Menu';
+import { createTheme } from '@mui/material'
 
 
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import Enzyme from './faq/Enzyme'
-import Aria from './faq/Aria'
+import Home from './Home'
 import AutocompletePage from './inputs-pages/AutocompletePage'
 import ButtonPage from './inputs-pages/ButtonPage'
 import ButtonGroupPage from './inputs-pages/ButtonGroupPage'
@@ -25,22 +26,32 @@ import CheckboxPage from './inputs-pages/CheckboxPage'
 import FloatingActionButtonPage from './inputs-pages/FloatingActionButtonPage'
 import RadioPage from './inputs-pages/RadioPage'
 
+import "@fontsource/plus-jakarta-sans";
+
 const drawerWidth = 240;
 
 export default function PermanentDrawerLeft() {
   let navigate = useNavigate()
+  
+  const [open, setOpen] = useState(false)
 
   return (
     <Box sx={{ display: 'flex' }}>
       <Helmet >
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1523342493703569" crossorigin="anonymous"></script>
       </Helmet>
-      <AppBar
-        position="fixed"
-        sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
-      >
+      <AppBar style={{ background: '#071a2d' }}>
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
+          <IconButton
+              size="large"
+              edge="start"
+              sx={{ mr: 2 }}
+              color="inherit"
+              onClick={()=>setOpen(true)}
+            >
+              <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap component="div" theme={createTheme({typography: {fontFamily:["Plus Jakarta Sans"]}})}>
             MUI Testing
           </Typography>
         </Toolbar>
@@ -55,7 +66,8 @@ export default function PermanentDrawerLeft() {
             boxSizing: 'border-box',
           },
         }}
-        variant="permanent"
+        open={open}
+        onClose={()=>setOpen(false)}
         anchor="left"
       >
         <Toolbar />
@@ -64,19 +76,6 @@ export default function PermanentDrawerLeft() {
 
           <ListItem button onClick={() => navigate('')}>
             <ListItemText primary={"Home"}/>
-          </ListItem>
-          <ListItem button onClick={() => navigate('about')}>
-            <ListItemText primary={"About"} />
-          </ListItem>
-
-          <ListSubheader>
-            FAQ
-          </ListSubheader>
-          <ListItem button onClick={() => navigate('enzyme')}>
-            <ListItemText primary={"Enzyme or RTL?"} />
-          </ListItem>
-          <ListItem button onClick={() => navigate('aria')}>
-            <ListItemText primary={"Why aria-label?"} />
           </ListItem>
 
           <ListSubheader>
@@ -124,38 +123,29 @@ export default function PermanentDrawerLeft() {
 
       <Box
         component="main"
-        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
+        sx={{ flexGrow: 1, bgcolor: 'background.default'}}
       >
         <Toolbar />
         <Routes>
-            <Route path="about" element={<About />}/>
+            <Route path="autocomplete" element={<Box sx={{padding: 5}}><AutocompletePage /></Box>}/>
         </Routes>
         <Routes>
-            <Route path="enzyme" element={<Enzyme />}/>
+            <Route path="button" element={<Box sx={{padding: 5}}><ButtonPage /></Box>}/>
         </Routes>
         <Routes>
-            <Route path="aria" element={<Aria />}/>
+            <Route path="buttongroup" element={<Box sx={{padding: 5}}><ButtonGroupPage /></Box>}/>
         </Routes>
         <Routes>
-            <Route path="autocomplete" element={<AutocompletePage />}/>
+            <Route path="checkbox" element={<Box sx={{padding: 5}}><CheckboxPage /></Box>}/>
         </Routes>
         <Routes>
-            <Route path="button" element={<ButtonPage />}/>
+            <Route path="fab" element={<Box sx={{padding: 5}}><FloatingActionButtonPage /></Box>}/>
         </Routes>
         <Routes>
-            <Route path="buttongroup" element={<ButtonGroupPage />}/>
+            <Route path="radio" element={<Box sx={{padding: 5}}><RadioPage /></Box>}/>
         </Routes>
         <Routes>
-            <Route path="checkbox" element={<CheckboxPage />}/>
-        </Routes>
-        <Routes>
-            <Route path="fab" element={<FloatingActionButtonPage />}/>
-        </Routes>
-        <Routes>
-            <Route path="radio" element={<RadioPage />}/>
-        </Routes>
-        <Routes>
-            <Route path="" element={<Home />}/>
+            <Route path="" element={<Home setOpen={setOpen}/>}/>
         </Routes>
       </Box>
     </Box>
