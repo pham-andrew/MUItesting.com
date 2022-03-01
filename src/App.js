@@ -54,7 +54,7 @@ export default function PermanentDrawerLeft() {
             >
               <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" theme={createTheme({typography: {fontFamily:["Plus Jakarta Sans"]}})}>
+          <Typography onClick={()=>navigate('')} variant="h6" theme={createTheme({typography: {fontFamily:["Plus Jakarta Sans"]}})}>
             MUI Testing
           </Typography>
         </Toolbar>
