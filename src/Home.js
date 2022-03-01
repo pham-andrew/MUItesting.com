@@ -22,8 +22,8 @@ export default function Home(props) {
                     >
                         This website provides a quick reference for testing Material UI components with React Testing Library. Simply click on the button below to see the components.
                     </Typography>
-                    <Button onClick={()=>props.setOpen(true)} sx={{margin: 2}} variant="contained">Open Component Drawer</Button>
-                    <Button href="https://github.com/pham-andrew/mui-testing" sx={{margin: 2}} variant="outlined"><GitHubIcon sx={{marginRight: 1}}/>github.com/pham-andrew/mui-testing</Button>
+                    <Button size="large" onClick={()=>props.setOpen(true)} sx={{margin: 2}} variant="contained">Open Component Drawer</Button>
+                    <Button size="large" href="https://github.com/pham-andrew/mui-testing" sx={{margin: 2}} variant="outlined"><GitHubIcon sx={{marginRight: 1}}/>github.com/pham-andrew/mui-testing</Button>
                 </Box>
             </Container>
             <Container maxWidth sx={{ bgcolor: '#0a1929', height: '800px', display: "flex", justifyContent: "left", alignItems: "flex-start", padding: 10}}>

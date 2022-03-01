@@ -25,8 +25,11 @@ import ButtonGroupPage from './inputs-pages/ButtonGroupPage'
 import CheckboxPage from './inputs-pages/CheckboxPage'
 import FloatingActionButtonPage from './inputs-pages/FloatingActionButtonPage'
 import RadioPage from './inputs-pages/RadioPage'
+import RatingPage from './inputs-pages/RatingPage'
+import SelectPage from './inputs-pages/SelectPage'
 
 import "@fontsource/plus-jakarta-sans";
+import TextFieldPage from './inputs-pages/TextFieldPage'
 
 const drawerWidth = 240;
 
@@ -99,6 +102,15 @@ export default function PermanentDrawerLeft() {
           <ListItem button onClick={() => navigate('radio')}>
             <ListItemText primary={"Radio"}/>
           </ListItem>
+          <ListItem button onClick={() => navigate('rating')}>
+            <ListItemText primary={"Rating"}/>
+          </ListItem>
+          <ListItem button onClick={() => navigate('select')}>
+            <ListItemText primary={"Select"}/>
+          </ListItem>
+          <ListItem button onClick={() => navigate('textfield')}>
+            <ListItemText primary={"TextField"}/>
+          </ListItem>
 
           <ListSubheader>
             Other Helpful Test Examples
@@ -143,6 +155,15 @@ export default function PermanentDrawerLeft() {
         </Routes>
         <Routes>
             <Route path="radio" element={<Box sx={{padding: 5}}><RadioPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="rating" element={<Box sx={{padding: 5}}><RatingPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="select" element={<Box sx={{padding: 5}}><SelectPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="textfield" element={<Box sx={{padding: 5}}><TextFieldPage /></Box>}/>
         </Routes>
         <Routes>
             <Route path="" element={<Home setOpen={setOpen}/>}/>
