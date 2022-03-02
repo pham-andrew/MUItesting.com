@@ -27,9 +27,11 @@ import FloatingActionButtonPage from './inputs-pages/FloatingActionButtonPage'
 import RadioPage from './inputs-pages/RadioPage'
 import RatingPage from './inputs-pages/RatingPage'
 import SelectPage from './inputs-pages/SelectPage'
+import TextFieldPage from './inputs-pages/TextFieldPage'
+
+import SnackbarPage from './feedback-pages/SnackbarPage'
 
 import "@fontsource/plus-jakarta-sans";
-import TextFieldPage from './inputs-pages/TextFieldPage'
 
 const drawerWidth = 240;
 
@@ -113,6 +115,13 @@ export default function PermanentDrawerLeft() {
           </ListItem>
 
           <ListSubheader>
+            Feedback
+          </ListSubheader>
+          <ListItem button onClick={() => navigate('snackbar')}>
+            <ListItemText primary={"Snackbar"}/>
+          </ListItem>
+
+          <ListSubheader>
             Other Helpful Test Examples
           </ListSubheader>
           <ListItem button disabled>
@@ -164,6 +173,9 @@ export default function PermanentDrawerLeft() {
         </Routes>
         <Routes>
             <Route path="textfield" element={<Box sx={{padding: 5}}><TextFieldPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="snackbar" element={<Box sx={{padding: 5}}><SnackbarPage /></Box>}/>
         </Routes>
         <Routes>
             <Route path="" element={<Home setOpen={setOpen}/>}/>
