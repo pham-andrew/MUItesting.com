@@ -6,18 +6,6 @@ import { Box } from '@mui/system';
 
 export default function TextFieldPage() {
     const [open, setOpen] = React.useState(false);
-
-    const handleClick = () => {
-        setOpen(true);
-      };
-    
-      const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-          return;
-        }
-    
-        setOpen(false);
-      };
     
     return(
         <>
@@ -25,10 +13,9 @@ export default function TextFieldPage() {
             <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
-                <Button onClick={handleClick}>Open Snackbar</Button>
+                <Button onClick={() => setOpen(true)}>Open Snackbar</Button>
                 <Snackbar
                     open={open}
-                    onClose={handleClose}
                     message="Delicious Delicious Snack Bar"
                     aria-label="snack"
                 />

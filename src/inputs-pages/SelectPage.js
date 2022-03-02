@@ -23,6 +23,7 @@ export default function SelectPage() {
                         value={age}
                         onChange={handleChange}
                         labelId="Age"
+                        inputProps={{ "data-testid": "input-test-id" }}
                     >
                         <MenuItem value={"10"}>Ten</MenuItem>
                         <MenuItem value={"20"}>Twenty</MenuItem>
@@ -33,7 +34,7 @@ export default function SelectPage() {
                 {age}
                 {/* 🙈 */}
             </Box>
-            <CodeBlocks source="" test=""/>
+            <CodeBlocks source="13ba603c79c91844685a92256265741f" test="0b850d4ff633d9ff008664b5166b4f4f"/>
         </>
     )
 }
