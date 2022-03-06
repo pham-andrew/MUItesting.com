@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { useState } from 'react'
 import Helmet from 'react-helmet'
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
+import "@fontsource/plus-jakarta-sans";
 
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
@@ -16,9 +18,8 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu';
 import { createTheme } from '@mui/material'
 
-
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
 import Home from './Home'
+
 import AutocompletePage from './inputs-pages/AutocompletePage'
 import ButtonPage from './inputs-pages/ButtonPage'
 import ButtonGroupPage from './inputs-pages/ButtonGroupPage'
@@ -32,11 +33,14 @@ import SwitchPage from './inputs-pages/SwitchPage'
 import TextFieldPage from './inputs-pages/TextFieldPage'
 import ToggleButtonPage from './inputs-pages/ToggleButtonPage'
 
+import AvatarPage from './data-display/AvatarPage'
+import BadgePage from './data-display/BadgePage';
+import ChipPage from './data-display/ChipPage';
+import DividerPage from './data-display/DividerPage';
+
 import SnackbarPage from './feedback-pages/SnackbarPage'
 
 import SorTablePage from './our-components/SorTablePage'
-
-import "@fontsource/plus-jakarta-sans";
 
 const drawerWidth = 240;
 
@@ -129,6 +133,22 @@ export default function PermanentDrawerLeft() {
           </ListItem>
 
           <ListSubheader>
+            Data Display
+          </ListSubheader>
+          <ListItem button onClick={() => navigate('avatar')}>
+            <ListItemText primary={"Avatar"}/>
+          </ListItem>
+          <ListItem button onClick={() => navigate('badge')}>
+            <ListItemText primary={"Badge"}/>
+          </ListItem>
+          <ListItem button onClick={() => navigate('chip')}>
+            <ListItemText primary={"Chip"}/>
+          </ListItem>
+          <ListItem button onClick={() => navigate('divider')}>
+            <ListItemText primary={"Divider"}/>
+          </ListItem>
+
+          <ListSubheader>
             Feedback
           </ListSubheader>
           <ListItem button onClick={() => navigate('snackbar')}>
@@ -209,6 +229,18 @@ export default function PermanentDrawerLeft() {
         </Routes>
         <Routes>
             <Route path="toggle" element={<Box sx={{padding: 5}}><ToggleButtonPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="avatar" element={<Box sx={{padding: 5}}><AvatarPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="badge" element={<Box sx={{padding: 5}}><BadgePage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="chip" element={<Box sx={{padding: 5}}><ChipPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="divider" element={<Box sx={{padding: 5}}><DividerPage /></Box>}/>
         </Routes>
         <Routes>
             <Route path="" element={<Home setOpen={setOpen}/>}/>

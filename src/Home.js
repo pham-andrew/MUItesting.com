@@ -54,11 +54,27 @@ export default function Home(props) {
                     </Grid>
                     <Grid xs={12} sx={{margin: 2}}>
                     <Typography color="gray" sx={{maxWidth: "800px"}}>
-                        You may notice that there are a lot of aria-labels in our test examples. Why is that? To find the element. It's like a test ID that's exposed to the user that we can use to identify elements.
-                        ARIA is a W3C specification that stands for “Accessible Rich Internet Applications”. It consists of markup that can be added to HTML in order to clearly communicate the roles, states, and properties of user interface elements.
+                        You may notice that there are a lot of aria-labels in our test examples. Why is that? To help find the element.
+                        ARIA is a W3C specification that stands for “Accessible Rich Internet Applications”.
                         The aria-label provides the element with an accessible name, usually when there's no name already or when the content isn't visible.
-                        Why can't you just find by test-id? It's bad practice because we want to test for things "visible" to the user and the aria label is exposed via the accessibility tree. The visually impaired may have a screen reader read it to them so while it's not visible, it is exposed.
-                        Fun fact: The RTL documentation list queries by priority. Using an aria-label allows you to get by label text, number 1 on the priority list. Test IDs are last on that list if you were wondering.
+                        Why can't you just find by test-id? It's bad practice because it's lower on the document queries priority list.
+                        Using an aria-label allows you to get by label text, number 1 on the priority list. Test IDs are last on the priority list.
+                    </Typography>
+                    </Grid>
+                    <Grid xs={12} sx={{margin: 2}}>
+                        <Typography 
+                            color="white" 
+                            variant="h4" 
+                            theme={createTheme({typography: {fontFamily:["Plus Jakarta Sans"]}})}
+                            sx={{fontWeight: "800"}}
+                        >
+                            What are inputProps?
+                        </Typography>
+                    </Grid>
+                    <Grid xs={12} sx={{margin: 2}}>
+                    <Typography color="gray" sx={{maxWidth: "800px"}}>
+                        MaterialUI components abstract the actual HTML used so labels sometimes end up on a parent tag. To test, we often specifically want to act on the input. 
+                        MaterialUI allows us to add properties to specifically the input of a MUI component by using the inputProps property. There we can label them to be found by our queries.
                     </Typography>
                     </Grid>
                     <Grid xs={12} sx={{margin: 2}}>
@@ -73,7 +89,7 @@ export default function Home(props) {
                     </Grid>
                     <Grid xs={12} sx={{margin: 2}}>
                     <Typography color="gray" sx={{maxWidth: "800px"}}>
-                        This site was made by Andrew Pham who hated testing and test driven development. 
+                        This site was made by Andrew Pham hated testing and test driven development.
                     </Typography>
                     </Grid>
                 </Grid>
