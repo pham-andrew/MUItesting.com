@@ -22,7 +22,7 @@ export default function SelectPage() {
                     <Select
                         value={age}
                         onChange={handleChange}
-                        labelId="Age"
+                        label="Age"
                         inputProps={{ "data-testid": "input-test-id" }}
                     >
                         <MenuItem value={"10"}>Ten</MenuItem>

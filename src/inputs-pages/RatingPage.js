@@ -18,6 +18,7 @@ export default function RatingPage() {
                     value={rating}
                     onChange={(event, newValue) => {setRating(newValue)}}
                 />
+                <br />
                 rating: {rating}
                 {/* 🙈 */}
             </Box>

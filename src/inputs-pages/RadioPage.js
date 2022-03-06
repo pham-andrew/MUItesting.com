@@ -32,6 +32,7 @@ export default function RadioPage() {
                         />
                     </RadioGroup>
                 </FormControl>
+                <br />
                 {sex}
                 {/* 🙈 */}
             </Box>

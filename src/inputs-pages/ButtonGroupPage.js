@@ -19,6 +19,7 @@ export default function ButtonGroupPage() {
                     <Button variant="contained" onClick={() => setClicked("click2")}>Two</Button>
                     <Button variant="contained" onClick={() => setClicked("click3")}>Three</Button>
                 </ButtonGroup>
+                <br />
                 {clicked}
                 {/* 🙈 */}
             </Box>

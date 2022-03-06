@@ -27,9 +27,14 @@ import FloatingActionButtonPage from './inputs-pages/FloatingActionButtonPage'
 import RadioPage from './inputs-pages/RadioPage'
 import RatingPage from './inputs-pages/RatingPage'
 import SelectPage from './inputs-pages/SelectPage'
+import SliderPage from './inputs-pages/SliderPage'
+import SwitchPage from './inputs-pages/SwitchPage'
 import TextFieldPage from './inputs-pages/TextFieldPage'
+import ToggleButtonPage from './inputs-pages/ToggleButtonPage'
 
 import SnackbarPage from './feedback-pages/SnackbarPage'
+
+import SorTablePage from './our-components/SorTablePage'
 
 import "@fontsource/plus-jakarta-sans";
 
@@ -110,8 +115,17 @@ export default function PermanentDrawerLeft() {
           <ListItem button onClick={() => navigate('select')}>
             <ListItemText primary={"Select"}/>
           </ListItem>
+          <ListItem button onClick={() => navigate('slider')}>
+            <ListItemText primary={"Slider"}/>
+          </ListItem>
+          <ListItem button onClick={() => navigate('switch')}>
+            <ListItemText primary={"Switch"}/>
+          </ListItem>
           <ListItem button onClick={() => navigate('textfield')}>
             <ListItemText primary={"TextField"}/>
+          </ListItem>
+          <ListItem button onClick={() => navigate('toggle')}>
+            <ListItemText primary={"ToggleButton"}/>
           </ListItem>
 
           <ListSubheader>
@@ -135,6 +149,13 @@ export default function PermanentDrawerLeft() {
           </ListItem>
           <ListItem button disabled>
             <ListItemText primary={"Query Examples, getBy..."}/>
+          </ListItem>
+
+          <ListSubheader>
+            Simple Component Examples
+          </ListSubheader>
+          <ListItem button onClick={() => navigate('sortable')}>
+            <ListItemText primary={"SorTable"}/>
           </ListItem>
 
 
@@ -172,10 +193,22 @@ export default function PermanentDrawerLeft() {
             <Route path="select" element={<Box sx={{padding: 5}}><SelectPage /></Box>}/>
         </Routes>
         <Routes>
-            <Route path="textfield" element={<Box sx={{padding: 5}}><TextFieldPage /></Box>}/>
+            <Route path="slider" element={<Box sx={{padding: 5}}><SliderPage /></Box>}/>
         </Routes>
         <Routes>
             <Route path="snackbar" element={<Box sx={{padding: 5}}><SnackbarPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="sortable" element={<Box sx={{padding: 5}}><SorTablePage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="switch" element={<Box sx={{padding: 5}}><SwitchPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="textfield" element={<Box sx={{padding: 5}}><TextFieldPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="toggle" element={<Box sx={{padding: 5}}><ToggleButtonPage /></Box>}/>
         </Routes>
         <Routes>
             <Route path="" element={<Home setOpen={setOpen}/>}/>
