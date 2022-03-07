@@ -16,7 +16,7 @@ import ListItemText from '@mui/material/ListItemText'
 import ListSubheader from '@mui/material/ListSubheader'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu';
-import { createTheme } from '@mui/material'
+import { createTheme, Tooltip } from '@mui/material'
 
 import Home from './Home'
 
@@ -37,10 +37,11 @@ import AvatarPage from './data-display/AvatarPage'
 import BadgePage from './data-display/BadgePage';
 import ChipPage from './data-display/ChipPage';
 import DividerPage from './data-display/DividerPage';
+import IconPage from './data-display/IconPage';
+import SorTablePage from './data-display/SorTablePage';
+import TooltipPage from './data-display/TooltipPage';
 
 import SnackbarPage from './feedback-pages/SnackbarPage'
-
-import SorTablePage from './our-components/SorTablePage'
 
 const drawerWidth = 240;
 
@@ -147,6 +148,16 @@ export default function PermanentDrawerLeft() {
           <ListItem button onClick={() => navigate('divider')}>
             <ListItemText primary={"Divider"}/>
           </ListItem>
+          <ListItem button onClick={() => navigate('icon')}>
+            <ListItemText primary={"Icon"}/>
+          </ListItem>
+          <ListItem button onClick={() => navigate('sortable')}>
+            <ListItemText primary={"SorTable"}/>
+          </ListItem>
+          <ListItem button onClick={() => navigate('tooltip')}>
+            <ListItemText primary={"Tooltip"}/>
+          </ListItem>
+
 
           <ListSubheader>
             Feedback
@@ -170,14 +181,6 @@ export default function PermanentDrawerLeft() {
           <ListItem button disabled>
             <ListItemText primary={"Query Examples, getBy..."}/>
           </ListItem>
-
-          <ListSubheader>
-            Simple Component Examples
-          </ListSubheader>
-          <ListItem button onClick={() => navigate('sortable')}>
-            <ListItemText primary={"SorTable"}/>
-          </ListItem>
-
 
         </List>
         <Divider />
@@ -241,6 +244,12 @@ export default function PermanentDrawerLeft() {
         </Routes>
         <Routes>
             <Route path="divider" element={<Box sx={{padding: 5}}><DividerPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="icon" element={<Box sx={{padding: 5}}><IconPage /></Box>}/>
+        </Routes>
+        <Routes>
+            <Route path="tooltip" element={<Box sx={{padding: 5}}><TooltipPage /></Box>}/>
         </Routes>
         <Routes>
             <Route path="" element={<Home setOpen={setOpen}/>}/>
