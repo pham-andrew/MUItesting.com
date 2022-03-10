@@ -17,7 +17,7 @@ export default function Home(props) {
                     >
                         The MaterialUI testing reference you needed</Typography>
                     <Typography 
-                        color="gray" 
+                        color="#B2BAC2" 
                         sx={{margin: 2, maxWidth: "650px"}}
                     >
                         This website provides a quick reference for testing Material UI components with React Testing Library. Simply click on the button below to see the components.
@@ -40,7 +40,9 @@ export default function Home(props) {
                         </Typography>
                     </Grid>
                     <Grid xs={12} sx={{margin: 2}}>
-                    <Typography color="gray">React recommends using Jest as the test runner and React Testing Library.</Typography>
+                    <Typography color="#B2BAC2">
+                        React recommends using Jest as the test runner and React Testing Library.
+                    </Typography>
                     </Grid>
                     <Grid xs={12} sx={{margin: 2}}>
                         <Typography 
@@ -53,7 +55,7 @@ export default function Home(props) {
                         </Typography>
                     </Grid>
                     <Grid xs={12} sx={{margin: 2}}>
-                    <Typography color="gray" sx={{maxWidth: "800px"}}>
+                    <Typography color="#B2BAC2" sx={{maxWidth: "800px"}}>
                         You may notice that there are a lot of aria-labels in our test examples. Why is that? To help find the element.
                         ARIA is a W3C specification that stands for “Accessible Rich Internet Applications”.
                         The aria-label provides the element with an accessible name, usually when there's no name already or when the content isn't visible.
@@ -72,7 +74,7 @@ export default function Home(props) {
                         </Typography>
                     </Grid>
                     <Grid xs={12} sx={{margin: 2}}>
-                    <Typography color="gray" sx={{maxWidth: "800px"}}>
+                    <Typography color="#B2BAC2" sx={{maxWidth: "800px"}}>
                         MaterialUI components abstract the actual HTML used so labels sometimes end up on a parent tag. To test, we often specifically want to act on the input. 
                         MaterialUI allows us to add properties to specifically the input of a MUI component by using the inputProps property. There we can label them to be found by our queries.
                     </Typography>
@@ -88,7 +90,7 @@ export default function Home(props) {
                         </Typography>
                     </Grid>
                     <Grid xs={12} sx={{margin: 2}}>
-                    <Typography color="gray" sx={{maxWidth: "800px"}}>
+                    <Typography color="#B2BAC2" sx={{maxWidth: "800px"}}>
                         This site was made by Andrew Pham hated testing and test driven development.
                     </Typography>
                     </Grid>
