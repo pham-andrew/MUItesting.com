@@ -9,7 +9,6 @@ export default function AvatarPage() {
     return(
         <>
             <Typography variant="h4" sx={{margin: 2}}>Avatar</Typography>
-            <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
                 <Avatar aria-label="avatar" src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png" />

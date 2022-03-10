@@ -4,13 +4,12 @@ import { Button, Snackbar } from '@mui/material';
 import CodeBlocks from '../CodeBlocks'
 import { Box } from '@mui/system';
 
-export default function TextFieldPage() {
+export default function SnackbarPage() {
     const [open, setOpen] = React.useState(false);
     
     return(
         <>
             <Typography variant="h4" sx={{margin: 2}}>Snackbar</Typography>
-            <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
                 <Button onClick={() => setOpen(true)}>Open Snackbar</Button>

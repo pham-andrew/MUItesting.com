@@ -10,7 +10,6 @@ export default function TooltipPage() {
     return(
         <>
             <Typography variant="h4" sx={{margin: 2}}>Tooltip</Typography>
-            <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
                 <Tooltip title="Bug">

@@ -14,7 +14,6 @@ export default function SliderPage() {
     return(
         <>
             <Typography variant="h4" sx={{margin: 2}}>Slider</Typography>
-            <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
                 <Slider value={value} onChange={handleChange} name="name-of-hidden-input-element" />

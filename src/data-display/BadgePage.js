@@ -9,7 +9,6 @@ export default function BadgePage() {
     return(
         <>
             <Typography variant="h4" sx={{margin: 2}}>Badge</Typography>
-            <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
                 <Badge badgeContent={3}>

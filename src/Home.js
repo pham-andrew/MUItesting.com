@@ -26,7 +26,7 @@ export default function Home(props) {
                     <Button size="large" href="https://github.com/pham-andrew/MUItesting.com" sx={{margin: 2}} variant="outlined"><GitHubIcon sx={{marginLeft: -1, marginRight: 1}}/>Code Repository</Button>
                 </Box>
             </Container>
-            <Container maxWidth sx={{ bgcolor: '#0a1929', height: '800px', display: "flex", justifyContent: "left", alignItems: "flex-start", padding: 10}}>
+            <Container maxWidth sx={{ bgcolor: '#0a1929', display: "flex", justifyContent: "left", alignItems: "flex-start", padding: 10}}>
                 <Grid container>
                     <Typography theme={createTheme({typography: {fontFamily:["Plus Jakarta Sans"]}})} sx={{margin: 2, fontWeight: "bold"}} color="primary">FAQ</Typography>
                     <Grid xs={12} sx={{margin: 2}}>

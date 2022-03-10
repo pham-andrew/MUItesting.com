@@ -10,7 +10,6 @@ export default function SwitchPage() {
     return(
         <>
             <Typography variant="h4" sx={{margin: 2}}>Switch</Typography>
-            <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
                 <Switch onChange={() => setState(!state)}/>

@@ -14,7 +14,6 @@ export default function ToggleButtonPage() {
     return(
         <>
             <Typography variant="h4" sx={{margin: 2}}>Toggle Button</Typography>
-            <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
                 <ToggleButtonGroup

@@ -9,7 +9,6 @@ export default function IconPage() {
     return(
         <>
             <Typography variant="h4" sx={{margin: 2}}>Icon</Typography>
-            <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
                 <EmojiNatureIcon />

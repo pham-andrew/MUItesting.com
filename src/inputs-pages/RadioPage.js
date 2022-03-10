@@ -13,7 +13,6 @@ export default function RadioPage() {
     return(
         <>
             <Typography variant="h4" sx={{margin: 2}}>Radio</Typography>
-            <Typography variant="h6" sx={{margin: 2}}>Live Component</Typography>
             <Box sx={{margin: 2}}>
                 {/* 👀 */}
                 <FormControl>

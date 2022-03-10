@@ -16,7 +16,6 @@ import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
-import ListSubheader from '@mui/material/ListSubheader'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu';
 import Collapse from '@mui/material/Collapse';
@@ -46,8 +45,11 @@ import DividerPage from './data-display/DividerPage';
 import IconPage from './data-display/IconPage';
 import SorTablePage from './data-display/SorTablePage';
 import TooltipPage from './data-display/TooltipPage';
+import TypographyPage from './data-display/TypographyPage'
 
 import SnackbarPage from './feedback-pages/SnackbarPage'
+import AlertPage from './feedback-pages/AlertPage';
+import BackdopPage from './feedback-pages/BackdropPage';
 
 const drawerWidth = 240;
 
@@ -178,6 +180,9 @@ export default function PermanentDrawerLeft() {
               <ListItem button onClick={() => navigate('tooltip')}>
                 <ListItemText primary={"Tooltip"}/>
               </ListItem>
+              <ListItem button onClick={() => navigate('typography')}>
+                <ListItemText primary={"Typography"}/>
+              </ListItem>
             </Collapse>
 
             <ListItemButton onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}>
@@ -185,6 +190,12 @@ export default function PermanentDrawerLeft() {
               {isFeedbackOpen ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={isFeedbackOpen}>
+            <ListItem button onClick={() => navigate('alert')}>
+                <ListItemText primary={"Alert"}/>
+              </ListItem>
+              <ListItem button onClick={() => navigate('backdrop')}>
+                <ListItemText primary={"Backdrop"}/>
+              </ListItem>
               <ListItem button onClick={() => navigate('snackbar')}>
                 <ListItemText primary={"Snackbar"}/>
               </ListItem>
@@ -272,6 +283,15 @@ export default function PermanentDrawerLeft() {
           </Routes>
           <Routes>
               <Route path="tooltip" element={<Box sx={{padding: 5}}><TooltipPage /></Box>}/>
+          </Routes>
+          <Routes>
+              <Route path="typography" element={<Box sx={{padding: 5}}><TypographyPage /></Box>}/>
+          </Routes>
+          <Routes>
+              <Route path="alert" element={<Box sx={{padding: 5}}><AlertPage /></Box>}/>
+          </Routes>
+          <Routes>
+              <Route path="backdrop" element={<Box sx={{padding: 5}}><BackdopPage /></Box>}/>
           </Routes>
           <Routes>
               <Route path="" element={<Home setOpen={setIsDrawerOpen}/>}/>
