@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e3344a6.css",
-    "main.js": "/static/js/main.ca540c24.js",
+    "main.css": "/static/css/main.8b127276.css",
+    "main.js": "/static/js/main.392e4ef5.js",
     "static/js/787.ba3ec041.chunk.js": "/static/js/787.ba3ec041.chunk.js",
+    "static/media/ibm-plex-sans-all-400-normal.woff": "/static/media/ibm-plex-sans-all-400-normal.ac37447d88dc924364ce.woff",
     "static/media/plus-jakarta-sans-latin-400-normal.woff": "/static/media/plus-jakarta-sans-latin-400-normal.f344d0fa890f4d98d58b.woff",
     "static/media/plus-jakarta-sans-latin-400-normal.woff2": "/static/media/plus-jakarta-sans-latin-400-normal.c4e0d18736aa954b32bf.woff2",
+    "static/media/ibm-plex-sans-latin-400-normal.woff2": "/static/media/ibm-plex-sans-latin-400-normal.4d32b6c22a800bdf8260.woff2",
+    "static/media/ibm-plex-sans-latin-ext-400-normal.woff2": "/static/media/ibm-plex-sans-latin-ext-400-normal.77bcbc5ecc8f4f2bbe06.woff2",
+    "static/media/ibm-plex-sans-cyrillic-400-normal.woff2": "/static/media/ibm-plex-sans-cyrillic-400-normal.2f77d85fb008b53d005a.woff2",
+    "static/media/ibm-plex-sans-greek-400-normal.woff2": "/static/media/ibm-plex-sans-greek-400-normal.3a057227a4ac726b71f5.woff2",
+    "static/media/ibm-plex-sans-cyrillic-ext-400-normal.woff2": "/static/media/ibm-plex-sans-cyrillic-ext-400-normal.56b6c5df575156819cfa.woff2",
+    "static/media/ibm-plex-sans-vietnamese-400-normal.woff2": "/static/media/ibm-plex-sans-vietnamese-400-normal.2e4166a1b8ecf1ee5e45.woff2",
     "index.html": "/index.html",
-    "main.2e3344a6.css.map": "/static/css/main.2e3344a6.css.map",
-    "main.ca540c24.js.map": "/static/js/main.ca540c24.js.map",
+    "main.8b127276.css.map": "/static/css/main.8b127276.css.map",
+    "main.392e4ef5.js.map": "/static/js/main.392e4ef5.js.map",
     "787.ba3ec041.chunk.js.map": "/static/js/787.ba3ec041.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e3344a6.css",
-    "static/js/main.ca540c24.js"
+    "static/css/main.8b127276.css",
+    "static/js/main.392e4ef5.js"
   ]
 }
