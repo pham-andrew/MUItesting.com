@@ -18,5 +18,5 @@ export default function ButtonPage() {
             </Box>
             <CodeBlocks source="e56a26c75fed69648ce602efc67778da" test="11f0992edecf5cdb72b74fc19eb50c6b" />
         </>
-    ) 
+    )
 }

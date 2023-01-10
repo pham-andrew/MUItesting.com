@@ -91,7 +91,7 @@ export default function Home(props) {
                     </Grid>
                     <Grid xs={12} sx={{margin: 2}}>
                     <Typography color="#B2BAC2" sx={{maxWidth: "800px"}}>
-                        This site was made by Andrew Pham hated testing and test driven development.
+                        This site was made by Andrew Pham who ated testing and test driven development.
                     </Typography>
                     </Grid>
                 </Grid>
